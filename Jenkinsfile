@@ -30,5 +30,10 @@ pipeline{
                 sh 'npm install'
             }
         }
+        stage('docker image'){
+            sh """
+                docker build -t cekharch/backend:${appVersion} .
+            """
+        }
     }
 }
