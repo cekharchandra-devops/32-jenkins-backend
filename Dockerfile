@@ -1,7 +1,7 @@
 FROM node:20 AS builder
 WORKDIR /opt/server
-COPY expense-backend/package.json .
-COPY expense-backend/*.js .
+COPY package.json .
+COPY *.js .
 RUN npm install
 
 
