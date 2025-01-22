@@ -31,9 +31,11 @@ pipeline{
             }
         }
         stage('docker image'){
-            sh """
+           steps{
+             sh """
                 docker build -t cekharch/backend:${appVersion} .
             """
+           }
         }
     }
 }
